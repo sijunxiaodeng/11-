@@ -6,7 +6,7 @@
 
 1. 查壳工具显示为32位加了upx壳
 
-![image-20241126161817890](C:\Users\吴思君\AppData\Roaming\Typora\typora-user-images\image-20241126161817890.png)
+![image-20241126161817890](BUUCTF.assets\image-20241126161817890.png)
 
 2. 进行脱壳处理  用IDA打开找到main入口转化成伪代码分析
 
@@ -28,9 +28,9 @@ str1就是str2    flag{HappyNewYear}
 
 ### rsa
 
-1. ![image-20241129191506967](C:\Users\吴思君\AppData\Roaming\Typora\typora-user-images\image-20241129191506967.png)得到公钥借助工具解析一下![image-20241129193454725](C:\Users\吴思君\AppData\Roaming\Typora\typora-user-images\image-20241129193454725.png)
+1. ![image-20241129191506967](BUUCTF.assets\image-20241129193454725.png)
 
-2. 模数是16进制的转换一下![image-20241129193547358](C:\Users\吴思君\AppData\Roaming\Typora\typora-user-images\image-20241129193547358.png)n=86 934 482 296 048 119 190 666 062 003 494 800 588 905 656 017 203 025 617 216 654 058 378 322 103 517
+2. 模数是16进制的转换一下![image-20241129193547358](BUUCTF.assets\image-20241129193547358.png)n=86 934 482 296 048 119 190 666 062 003 494 800 588 905 656 017 203 025 617 216 654 058 378 322 103 517
 
    分解一下
 
@@ -38,7 +38,7 @@ str1就是str2    flag{HappyNewYear}
 
    q=285960468890451637935629440372639283459
 
-3. 现已知p,q,n,e写脚本求解得到flag![image-20241129204411234](C:\Users\吴思君\AppData\Roaming\Typora\typora-user-images\image-20241129204411234.png)
+3. 现已知p,q,n,e写脚本求解得到flag![image-20241129204411234](BUUCTF.assets\image-20241129204411234.png)
 
 ---
 
@@ -46,7 +46,7 @@ str1就是str2    flag{HappyNewYear}
 
 1. 查壳 ：无壳 32位 用C++编写
 
-2. IDA打开找到WinMain入口            DialogBoxParamA传入一个函数作为参数创建对话框![image-20241129204635285](C:\Users\吴思君\AppData\Roaming\Typora\typora-user-images\image-20241129204635285.png)
+2. IDA打开找到WinMain入口            DialogBoxParamA传入一个函数作为参数创建对话框![image-20241129204635285](BUUCTF.assets\image-20241129204635285.png)
 
 3. **DialogFunc**是关键函数跟进一下
 
